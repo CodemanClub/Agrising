@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {View, StyleSheet,AsyncStorage,ToastAndroid,ActivityIndicator,Text} from 'react-native';
-import { Container, Header, Content, Form, Item, Input, Label , Button,Tabs,Tab} from 'native-base';
+import { Container, Header, Content, Form, Item, Input, Label , Button,Tabs,Tab,Thumbnail,List, ListItem, Icon, Left, Body, Right, Switch} from 'native-base';
 import { connect } from 'react-redux';
 
-import *as Action from '../action';// 导入action方法
+import *as Action from '../action';
 import Request from '../common/request';
 
 class MyPage extends Component {
@@ -41,7 +41,6 @@ class MyPage extends Component {
         this.setState({show:'login'});
         ToastAndroid.show(responseJson.err_msg, ToastAndroid.SHORT);
       }
-      
     });
   };
   logout=()=>{
@@ -133,10 +132,50 @@ class MyPage extends Component {
       );
   };
   userComponent=()=>{
+    const {navigate} = this.props.navigator
     return (
       <Content>
+        <Thumbnail large source={{uri: this.state.user.avatar}} />
         <Text>{this.state.user.name}</Text>
-        <Button full onPress={()=>this.logout()}>
+         <List>
+            <ListItem icon onPress={()=>navigate('Cart')}>
+              <Left>
+                <Icon name="cart" />
+              </Left>
+              <Body>
+                <Text>我的购物车</Text>
+              </Body>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
+            </ListItem>
+
+            <ListItem icon onPress={()=>{console.log('test')}}>
+              <Left>
+                <Icon name="pulse" />
+              </Left>
+              <Body>
+                <Text>问题反馈</Text>
+              </Body>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
+            </ListItem>
+
+            <ListItem icon onPress={()=>{console.log('test')}}>
+              <Left>
+                <Icon name="logo-whatsapp" />
+              </Left>
+              <Body>
+                <Text>客服电话</Text>
+              </Body>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
+            </ListItem>
+
+          </List>
+        <Button full onPress={()=>this.logout()} style={styles.button}>
           <Text>注销用户</Text>
         </Button>
       </Content>

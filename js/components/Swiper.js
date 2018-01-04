@@ -56,7 +56,6 @@ export default class SwiperDemo extends Component{
     return (
       <View style={styles.wrapper}>
         <Swiper
-        autoplay={true}
         >
         {this.getSwiperList()}
         </Swiper>

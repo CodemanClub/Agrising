@@ -16,11 +16,13 @@ import VideoPlayerScreen from './js/meeting/videoPlayer';
 import AgMallScreen from './js/agMall';
 import ProductScreen from './js/agMall/productEntry';
 import MyScreen from './js/my';
-import TestScreen from './js/my/Test';
 import PayFromOrderScreen from './js/myOrder/payFromOrder';
 import OrderDetailScreen from './js/myOrder/orderDetail';
 import ExpressLookScreen from './js/myOrder/express';
-// import QuotationScreen from './js/quotation';
+import QuotationScreen from './js/quotation';
+import CartScreen from './js/my/cart';
+import ConfirmOrderScreen from './js/agMall/confirmOrder';
+import PayScreen from './js/agMall/pay';
 
 
 const App = StackNavigator({
@@ -37,9 +39,10 @@ const App = StackNavigator({
   PayFromOrder:{screen:PayFromOrderScreen},
   OrderDetail:{screen:OrderDetailScreen},
   ExpressLook:{screen:ExpressLookScreen},
-  // Quotation:{screen:QuotationScreen},
-  Test:{screen:TestScreen}
-
+  Quotation:{screen:QuotationScreen},
+  Cart:{screen:CartScreen},
+  ConfirmOrder:{screen:ConfirmOrderScreen},
+  Pay:{screen:PayScreen}
 },
 {
   initialRouteName: "Home",

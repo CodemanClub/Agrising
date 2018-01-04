@@ -15,10 +15,9 @@ request.get = function(api,params){
 }
 
 request.post = function(api,params){
-	return fetch(config.api.base+api, {
+	return fetch(config.api.base+api+'?'+queryString.stringify(params), {
 	  method: config.header.method,
-	  headers: config.header.headers,
-	  body: JSON.stringify(params)
+	  headers: config.header.headers
 	}).then(response => response.json());
 }
 
