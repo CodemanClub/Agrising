@@ -16,6 +16,7 @@ class MyPage extends Component {
     this.state = {
       show: 'login',
       animating: false,
+      touchEnable:false,
       user: null
     }
   };
@@ -64,41 +65,33 @@ class MyPage extends Component {
       }
     });
   };
+  getAuthCode=()=>{
+    Request.get('getAuth_code?mobile='+this.email).then(responseJson=>{
+      if (!responseJson.err_code) {
+        ToastAndroid.show('短信已发出请注意查收', ToastAndroid.SHORT);
+        this.setState({
+          touchEnable:true
+        });
+      }else {
+        ToastAndroid.show(responseJson.err_msg, ToastAndroid.SHORT);
+      }
+    });
+  };
   loginComponent = () =>{
     return(
       <Content>
-        <Tabs initialPage={1}>
-          <Tab heading="邮箱登陆">
-            <Form>
+        <Form>
               <Item inlineLabel>
-                <Input onChangeText={(text) => {this.email = text}} placeholder="邮箱"/>
-              </Item>
-              <Item inlineLabel>
-                <Input onChangeText={(text) => {this.passWord = text}} placeholder="密码"/>
-              </Item>
-              <View style={styles.button}>
-                <Button full onPress={()=>this.login()}>
-                  <Text>登录</Text>
-                </Button>
-              </View>
-              <View style={styles.button}>
-                <Button full success  onPress={() =>{
-                  this.setState({show:'regist'});
-                }}>
-                  <Text>注册</Text>
-                </Button>
-              </View>
-            </Form>
-          </Tab>
-          <Tab heading="手机登录">
-            <Form>
-              <Item inlineLabel>
-                <Input onChangeText={(text) => {this.email = text}} placeholder="手机号"/>
+                <Input onChangeText={(text) => {
+                  this.email = text;
+                  this.setState({touchEnable:false});
+                }} placeholder="手机号"/>
               </Item>
               <Item inlineLabel>
                 <Input onChangeText={(text) => {this.passWord = text}} placeholder="验证码"/>
-                <Button 
-                onPress={()=>Request.get('getAuth_code?mobile='+this.email)}>
+                <Button
+                disabled={this.state.touchEnable} 
+                onPress={()=>this.getAuthCode()}>
                 <Text>获取验证码</Text>
                 </Button>
               </Item>
@@ -108,9 +101,6 @@ class MyPage extends Component {
                 </Button>
               </View>
             </Form>
-          </Tab>
-        </Tabs>
-          
         </Content>
         );
   };

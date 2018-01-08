@@ -11,6 +11,8 @@ import My from './my';
 import Orders from './myOrder';
 import *as userAction from './action';// 导入action方法
 
+
+
 class AppDemo extends Component{
   constructor(props) {
     super(props);
@@ -22,7 +24,6 @@ class AppDemo extends Component{
       AsyncStorage.getItem('token').then((res)=>{
           const { loginAction } = this.props;
           loginAction(res)
-
           console.log(res)
         });
     } catch (error) {

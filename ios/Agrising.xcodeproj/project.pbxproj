@@ -61,6 +61,8 @@
 		3857C0F6B482497583D99D83 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC95868D017541BD8C7B7B5A /* Octicons.ttf */; };
 		4934B8DADFC14B78BC8586C6 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43E138FF15514CD88008EF73 /* SimpleLineIcons.ttf */; };
 		76C53EB3DDDE4CE9AA20C167 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98122F1B0AEF466A8A7667EE /* Zocial.ttf */; };
+		A2906D628C7B494883269096 /* libRNAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C2EA3FA9E245F181C5DBAA /* libRNAnalytics.a */; };
+		7ED56545A0764AED9B14ABB3 /* libRCTBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6BAD2571B04866BC63EFC0 /* libRCTBaiduMobStat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +317,10 @@
 		CC95868D017541BD8C7B7B5A /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		43E138FF15514CD88008EF73 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		98122F1B0AEF466A8A7667EE /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6EAAADD19BFB4235B11707BF /* RNAnalytics.xcodeproj */ = {isa = PBXFileReference; name = "RNAnalytics.xcodeproj"; path = "../node_modules/react-native-baidu-analytics/ios/RNAnalytics.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		12C2EA3FA9E245F181C5DBAA /* libRNAnalytics.a */ = {isa = PBXFileReference; name = "libRNAnalytics.a"; path = "libRNAnalytics.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5222E5D040CF4EC796506F01 /* RCTBaiduMobStat.xcodeproj */ = {isa = PBXFileReference; name = "RCTBaiduMobStat.xcodeproj"; path = "../node_modules/baidumobstat-react-native/ios/RCTBaiduMobStat/RCTBaiduMobStat.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		FD6BAD2571B04866BC63EFC0 /* libRCTBaiduMobStat.a */ = {isa = PBXFileReference; name = "libRCTBaiduMobStat.a"; path = "libRCTBaiduMobStat.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +351,8 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				2FCE3D9001E64CC8B5073527 /* libRNVectorIcons.a in Frameworks */,
 				9A6576F9D3D241858DB7C6FA /* libRCTVideo.a in Frameworks */,
+				A2906D628C7B494883269096 /* libRNAnalytics.a in Frameworks */,
+				7ED56545A0764AED9B14ABB3 /* libRCTBaiduMobStat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +523,8 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				4EDDFACF31E34EB5A36F62AD /* RNVectorIcons.xcodeproj */,
 				0F8B14806B754ECEA8B78E8A /* RCTVideo.xcodeproj */,
+				6EAAADD19BFB4235B11707BF /* RNAnalytics.xcodeproj */,
+				5222E5D040CF4EC796506F01 /* RCTBaiduMobStat.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1119,11 +1129,15 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
+					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
 				);
 			};
 			name = Debug;
@@ -1146,11 +1160,15 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
+					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
 				);
 			};
 			name = Release;
@@ -1174,6 +1192,8 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
+					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
 				);
 			};
 			name = Debug;
@@ -1196,6 +1216,8 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
+					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
 				);
 			};
 			name = Release;
@@ -1227,11 +1249,15 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
+					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
 				);
 			};
 			name = Debug;
@@ -1263,11 +1289,15 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
+					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
 				);
 			};
 			name = Release;
@@ -1294,6 +1324,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1318,6 +1350,8 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
