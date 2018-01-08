@@ -23,6 +23,8 @@ import QuotationScreen from './js/quotation';
 import CartScreen from './js/my/cart';
 import ConfirmOrderScreen from './js/agMall/confirmOrder';
 import PayScreen from './js/agMall/pay';
+import AddAddressScreen from './js/agMall/addAddress';
+import SelectAddressScreen from './js/agMall/selectAddress';
 
 
 const App = StackNavigator({
@@ -42,7 +44,9 @@ const App = StackNavigator({
   Quotation:{screen:QuotationScreen},
   Cart:{screen:CartScreen},
   ConfirmOrder:{screen:ConfirmOrderScreen},
-  Pay:{screen:PayScreen}
+  Pay:{screen:PayScreen},
+  AddAddress:{screen:AddAddressScreen},
+  SelectAddress:{screen:SelectAddressScreen}
 },
 {
   initialRouteName: "Home",

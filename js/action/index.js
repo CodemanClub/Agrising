@@ -29,3 +29,10 @@ export function clearOrders(){
 		orders : null
 	}
 }
+
+export function buyItem(item){
+	return {
+		type:'BUY_ITEM',
+		item:item
+	}
+}

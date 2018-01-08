@@ -91,14 +91,30 @@ class MyPage extends Component {
             </Form>
           </Tab>
           <Tab heading="手机登录">
-            <Text>手机登录</Text>
+            <Form>
+              <Item inlineLabel>
+                <Input onChangeText={(text) => {this.email = text}} placeholder="手机号"/>
+              </Item>
+              <Item inlineLabel>
+                <Input onChangeText={(text) => {this.passWord = text}} placeholder="验证码"/>
+                <Button 
+                onPress={()=>Request.get('getAuth_code?mobile='+this.email)}>
+                <Text>获取验证码</Text>
+                </Button>
+              </Item>
+              <View style={styles.button}>
+                <Button full onPress={()=>this.login()}>
+                  <Text>登录</Text>
+                </Button>
+              </View>
+            </Form>
           </Tab>
         </Tabs>
           
         </Content>
         );
   };
-  registComponent= () =>{
+  registComponent = () =>{
     return(
         <Content>
           <Form>
@@ -132,13 +148,13 @@ class MyPage extends Component {
       );
   };
   userComponent=()=>{
-    const {navigate} = this.props.navigator
+    const { navigate } = this.props.navigation;
     return (
       <Content>
         <Thumbnail large source={{uri: this.state.user.avatar}} />
         <Text>{this.state.user.name}</Text>
          <List>
-            <ListItem icon onPress={()=>navigate('Cart')}>
+            <ListItem style={styles.ListItem} icon onPress={()=>navigate('Cart')}>
               <Left>
                 <Icon name="cart" />
               </Left>
@@ -150,7 +166,7 @@ class MyPage extends Component {
               </Right>
             </ListItem>
 
-            <ListItem icon onPress={()=>{console.log('test')}}>
+            <ListItem style={styles.ListItem} icon onPress={()=>{console.log('test')}}>
               <Left>
                 <Icon name="pulse" />
               </Left>
@@ -162,7 +178,7 @@ class MyPage extends Component {
               </Right>
             </ListItem>
 
-            <ListItem icon onPress={()=>{console.log('test')}}>
+            <ListItem style={styles.ListItem} icon onPress={()=>{console.log('test')}}>
               <Left>
                 <Icon name="logo-whatsapp" />
               </Left>
@@ -175,7 +191,7 @@ class MyPage extends Component {
             </ListItem>
 
           </List>
-        <Button full onPress={()=>this.logout()} style={styles.button}>
+        <Button full style={{backgroundColor:'#ff9900',marginTop:20}} onPress={()=>this.logout()}>
           <Text>注销用户</Text>
         </Button>
       </Content>
@@ -215,8 +231,8 @@ class MyPage extends Component {
   }
 }
 const styles = StyleSheet.create({
-  button: {
-    marginTop:20
+  ListItem:{
+    marginLeft:0
   }
 });
 

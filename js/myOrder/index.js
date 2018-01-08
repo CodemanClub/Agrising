@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {FlatList,TouchableOpacity,View} from 'react-native';
 import { connect } from 'react-redux';
-import { Card, CardItem, Text, Icon, Right , Button,Tabs,Tab} from 'native-base';
+import { Container,Content,Card, CardItem, Text, Icon, Right , Button,Tabs,Tab} from 'native-base';
 
 import {saveOrders} from '../action';// 导入action方法
 import Request from '../common/request';
@@ -86,6 +86,7 @@ class Orders extends Component{
 		);
 	};
 	render(){
+		const {navigate} = this.props.navigator;
 		console.log(this.props.orders)
 		console.log(this.props.token)
 		if (this.props.token) {
@@ -111,7 +112,16 @@ class Orders extends Component{
 			}
 		}else{
 			return(
-				<Text>请登录</Text>
+				<Container>
+					<View 
+					style={{
+						margin:'auto'
+					}} >
+						<Button onPress={()=>navigate('My')}>
+							<Text>请登录</Text>
+						</Button>
+					</View>
+				</Container>
 			);
 		}
 	};

@@ -50,7 +50,7 @@ class AppDemo extends Component{
           {/*订单*/}
           <TabNavigator.Item
             selected={this.state.selectedTab === 'Order'}
-            title="Order"
+            title="订单"
             titleStyle={styles.title}
             selectedTitleStyle={styles.title_selected}
             renderIcon={() => <Icon style={styles.icon_unselected} name="ios-reorder-outline"/>}
@@ -64,14 +64,14 @@ class AppDemo extends Component{
           {/*我的*/}
           <TabNavigator.Item
             selected={this.state.selectedTab === 'My'}
-            title="My"
+            title="我的"
             titleStyle={styles.title}
             selectedTitleStyle={styles.title_selected}
             renderIcon={() => <Icon style={styles.icon_unselected} name="ios-person-outline"/>}
             renderSelectedIcon={() => <Icon style={styles.icon_selected} name="ios-person"/>}
             onPress={() => this.setState({ selectedTab: 'My' })}
           >
-          <My navigator={this.props.navigation} />
+          <My navigation={this.props.navigation} />
           </TabNavigator.Item>
         </TabNavigator>
       </Container>
