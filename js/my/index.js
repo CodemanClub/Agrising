@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 import *as Action from '../action';
 import Request from '../common/request';
+import BaiduMJT from 'react-native-baidu-mjt';
+
 
 class MyPage extends Component {
   constructor(props) {
@@ -19,6 +21,7 @@ class MyPage extends Component {
       touchEnable:false,
       user: null
     }
+    BaiduMJT.eventStart('我的', 'label')
   };
   getUser=(token)=>{
     Request.get('getAuthenticatedUser?token='+token).then(responseJson=>{

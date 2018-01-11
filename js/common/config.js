@@ -10,7 +10,7 @@ module.exports = {
 		}
 	},
 	api:{
-		// base: 'http://192.168.10.11/api/'
-		base: 'https://api.agrising.com/api/'
+		base: 'http://192.168.10.11/api/'
+		// base: 'https://api.agrising.com/api/'
 	}
 }

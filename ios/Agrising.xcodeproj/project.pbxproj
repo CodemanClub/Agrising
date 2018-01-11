@@ -63,6 +63,7 @@
 		76C53EB3DDDE4CE9AA20C167 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98122F1B0AEF466A8A7667EE /* Zocial.ttf */; };
 		A2906D628C7B494883269096 /* libRNAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C2EA3FA9E245F181C5DBAA /* libRNAnalytics.a */; };
 		7ED56545A0764AED9B14ABB3 /* libRCTBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6BAD2571B04866BC63EFC0 /* libRCTBaiduMobStat.a */; };
+		94534E3DC3B54384A0659ACD /* libRNBaiduMJT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BEF3CF27B04F88834B98D7 /* libRNBaiduMJT.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +322,8 @@
 		12C2EA3FA9E245F181C5DBAA /* libRNAnalytics.a */ = {isa = PBXFileReference; name = "libRNAnalytics.a"; path = "libRNAnalytics.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		5222E5D040CF4EC796506F01 /* RCTBaiduMobStat.xcodeproj */ = {isa = PBXFileReference; name = "RCTBaiduMobStat.xcodeproj"; path = "../node_modules/baidumobstat-react-native/ios/RCTBaiduMobStat/RCTBaiduMobStat.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		FD6BAD2571B04866BC63EFC0 /* libRCTBaiduMobStat.a */ = {isa = PBXFileReference; name = "libRCTBaiduMobStat.a"; path = "libRCTBaiduMobStat.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CDE4A5B698D748D0BF208204 /* RNBaiduMJT.xcodeproj */ = {isa = PBXFileReference; name = "RNBaiduMJT.xcodeproj"; path = "../node_modules/react-native-baidu-mjt/ios/RNBaiduMJT.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		19BEF3CF27B04F88834B98D7 /* libRNBaiduMJT.a */ = {isa = PBXFileReference; name = "libRNBaiduMJT.a"; path = "libRNBaiduMJT.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +356,7 @@
 				9A6576F9D3D241858DB7C6FA /* libRCTVideo.a in Frameworks */,
 				A2906D628C7B494883269096 /* libRNAnalytics.a in Frameworks */,
 				7ED56545A0764AED9B14ABB3 /* libRCTBaiduMobStat.a in Frameworks */,
+				94534E3DC3B54384A0659ACD /* libRNBaiduMJT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +529,7 @@
 				0F8B14806B754ECEA8B78E8A /* RCTVideo.xcodeproj */,
 				6EAAADD19BFB4235B11707BF /* RNAnalytics.xcodeproj */,
 				5222E5D040CF4EC796506F01 /* RCTBaiduMobStat.xcodeproj */,
+				CDE4A5B698D748D0BF208204 /* RNBaiduMJT.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1131,6 +1136,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1138,6 +1144,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
 					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
 					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-mjt\ios/**",
 				);
 			};
 			name = Debug;
@@ -1162,6 +1169,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1169,6 +1177,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
 					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
 					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-mjt\ios/**",
 				);
 			};
 			name = Release;
@@ -1194,6 +1203,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
 					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
 					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-mjt\ios/**",
 				);
 			};
 			name = Debug;
@@ -1218,6 +1228,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
 					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
 					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-mjt\ios/**",
 				);
 			};
 			name = Release;
@@ -1251,6 +1262,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1258,6 +1270,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
 					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
 					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-mjt\ios/**",
 				);
 			};
 			name = Debug;
@@ -1291,6 +1304,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1298,6 +1312,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
 					"$(SRCROOT)\..\node_modules\react-native-baidu-analytics\ios",
 					"$(SRCROOT)\..\node_modules\baidumobstat-react-native\ios\RCTBaiduMobStat/**",
+					"$(SRCROOT)\..\node_modules\react-native-baidu-mjt\ios/**",
 				);
 			};
 			name = Release;
@@ -1326,6 +1341,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1350,6 +1366,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

@@ -26,7 +26,6 @@ import PayScreen from './js/agMall/pay';
 import AddAddressScreen from './js/agMall/addAddress';
 import SelectAddressScreen from './js/agMall/selectAddress';
 
-
 const App = StackNavigator({
   Home: { screen: HomeScreen },
   Pedia: { screen: PediaScreen },
@@ -54,6 +53,7 @@ const App = StackNavigator({
 );
 
 import rootReducer from './js/reducers'
+
 const store = createStore(rootReducer);
 export default () =>
     <Root>

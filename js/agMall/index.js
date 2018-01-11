@@ -5,6 +5,8 @@ import Swiper from 'react-native-swiper';
 
 import Request from '../common/request';
 
+import BaiduMJT from 'react-native-baidu-mjt';
+
 var styles = StyleSheet.create({
   wrapper: {
     height:200
@@ -21,6 +23,7 @@ export default class ProductList extends Component {
       products:null,
       swiper:null
     }
+    BaiduMJT.eventStart('商城', 'label')
   }
 
   handleLoadMore = (url) => {

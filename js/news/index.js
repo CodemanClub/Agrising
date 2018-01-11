@@ -4,10 +4,13 @@ import {Container,Header,Item,Icon} from 'native-base';
 
 import EntryList from '../components/SimpleList';
 
+import BaiduMJT from 'react-native-baidu-mjt';
+
 export default class News extends Component {
 
   constructor(props) {
     super(props);
+    BaiduMJT.eventStart('新闻', 'label')
   }
   render() {
     return (

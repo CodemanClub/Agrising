@@ -11,12 +11,22 @@ import My from './my';
 import Orders from './myOrder';
 import *as userAction from './action';// 导入action方法
 
+import BaiduMJT from 'react-native-baidu-mjt';
 
 
 class AppDemo extends Component{
   constructor(props) {
     super(props);
     this.state = {selectedTab: 'home' }
+    const options = {
+      "enableExceptionLog": 0,
+      "logSendWifiOnly": true,
+      "enableGps": false,
+      "enableDebug": true,
+      "appKey": '7e0646fd7a'
+    };
+    BaiduMJT.start(options)
+    BaiduMJT.eventStart('首页', 'label')
   };
   componentDidMount = () => {
 
